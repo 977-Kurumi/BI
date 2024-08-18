@@ -106,6 +106,7 @@ export const layout: RunTimeLayoutConfig = ({ initialState, setInitialState }) =
       return (
         <>
           {children}
+          {isDev && (
           <SettingDrawer
             disableUrlParams
             enableDarkTheme
@@ -117,6 +118,7 @@ export const layout: RunTimeLayoutConfig = ({ initialState, setInitialState }) =
               }));
             }}
           />
+            )}
         </>
       );
     },
